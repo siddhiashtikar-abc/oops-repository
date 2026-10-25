@@ -1,30 +1,28 @@
-#include <iostream>  // Header file for input and output
-using namespace std; // To use cout and cin without std::
+
+#include <iostream>
+using namespace std;
 
 int main()
 {
-    int a, b, c; // Variables to store two numbers and the result
+    int a, b;
 
-    cout << "Enter 2 numbers: " << endl; // Ask the user to enter two numbers
-    cin >> a >> b; // Accept two numbers from the user
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
 
-    try // Block to check for exceptions
+    try
     {
-        if(b == 0) // Check whether the second number is zero
+        if (b == 0)
         {
-            throw b; // Throw an exception if b is zero
+            throw b;
         }
 
-        c = a / b; // Divide a by b and store the result
-        cout << "Division is: " << c << endl; // Display the result
+        cout << "Division = " << a / b;
     }
-    catch(int x) // Catch the integer exception
+    catch (int x)
     {
-        cout << "Arithmetic error\n"; // Display error message
-        cout << "Divide by: " << x << endl; // Display the value causing the error
+        cout << "Exception: Division by zero is not allowed!";
     }
 
-    cout << "After Division operation"; // Execute after try-catch
-
-    return 0; // End the program successfully
+    return 0;
 }
+      
